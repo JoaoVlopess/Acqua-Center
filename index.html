@@ -5,35 +5,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/Css/style.css" />
-    <title>Landing Page</title>
+    <title>Acqua Center</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
-        <div class="container">
+        <div class="header">
             <div class="header_title">
                 <p>Acqua Center</p>
             </div>
             <div class="header_menu">
                 <nav>
                     <ul>
+                        <li class="active"><a href="">HOME</a></li>
                         <li><a href="">PRODUTOS</a></li>
                         <li><a href="">BENEFÍCIOS</a></li>
                         <li><a href="">QUEM SOMOS</a></li>
                         <li><a href="">DEPOIMENTOS</a></li>
-                        <li><a href="">CONTATO</a></li>
+                        <li class="last"><a href="">CONTATO</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
-    <section id="banner">
-        
-    </section>
+    <main>
+        <section class="home">
+            <div class="sliders">
+                <div class="slide piscina">
+                    <div class="slidearea">
+                        <h1>Procurando CUIDADOS</h1>
+                        <h2>para a sua PISCINA?</h2>
+                        <p>CONHEÇA TODOS OS NOSSOS SERVIÇOS</p>
+                        <a href="" class="contact">Entre em contato</a>
+                    </div>
+                </div>
+                <div class="slide produtos">
+                    <div class="slidearea">
+                        <h1>Procurando Produtos de Limpeza</h1>
+                        <h2>para a sua piscina?</h2>
+                        <p>CONHEÇA TODOS OS NOSSOS PRODUTOS</p>
+                        <a href="" class="contact">Entre em contato</a>
+                    </div>
+                </div>
+                <div class="slide brinquedos">
+                    <div class="slidearea">
+                        <h1>Procurando brinquedos Infláveis</h1>
+                        <h2>para se divertir em família?</h2>
+                        <p>CONHEÇA TODOS OS NOSSOS PRODUTOS</p>
+                        <a href="" class="contact">Entre em contato</a>
+                    </div>
+                </div>
+            </div>
+            <div class="sliders-pointers">
+                <div  class="pointer active" data-item="0"></div>
+                <div  class="pointer" data-item="1"></div>
+                <div  class="pointer" data-item="2"></div>
+            </div>
+        </section>
+        <section class="produtos">
+            <p class="produtos-sub-title">CONHEÇA OS</p>
+            <h1 class="produtos-title">NOSSOS SERVIÇOS E PRODUTOS</h1>
 
+            <div class="area-produtos">
+                <div class="produto">
+                    <img src="assets/image/agua.png" class="produto-icon" alt="">
+                    <h3 class="produto-title">Limpeza</h3>
+                    <P class="produto-descricao">In consectetur interdum ipsum.  acquat convallis sed felis. Proin dapibus eros sit amet iaculisrhoncus in.</P>
+                </div>
+                <div class="produto">
+                    <img src="assets/image/filtro.png" class="produto-icon" alt="">
+                    <h3 class="produto-title">Manutenção</h3>
+                    <P class="produto-descricao">In consectetur interdum ipsum.  acquat convallis sed felis. Proin dapibus eros sit amet iaculisrhoncus in.</P>
+                </div>
+                <div class="produto">
+                    <img src="assets/image/ferramentas.png" class="produto-icon" alt="">
+                    <h3 class="produto-title">Reparo</h3> <!--bombas e filtors -->
+                    <P class="produto-descricao">In consectetur interdum ipsum.  acquat convallis sed felis. Proin dapibus eros sit amet iaculisrhoncus in.</P>
+                </div>
+                <div class="produto">
+                    <img src="assets/image/cloro.png" class="produto-icon" alt="">
+                    <h3 class="produto-title">Produtos Químicos</h3>
+                    <P class="produto-descricao">In consectetur interdum ipsum.  acquat convallis sed felis. Proin dapibus eros sit amet iaculisrhoncus in.</P>
+                </div>
+                <div class="produto">
+                    <img src="assets/image/big-float.png" class="produto-icon" alt="">
+                    <h3 class="produto-title">Infláveis</h3>
+                    <P class="produto-descricao">In consectetur interdum ipsum.  acquat convallis sed felis. Proin dapibus eros sit amet iaculisrhoncus in.</P>
+                </div>
+                <div class="produto">
+                    <img src="assets/image/liquido.png" class="produto-icon" alt="">
+                    <h3 class="produto-title">Equipamentos</h3>
+                    <P class="produto-descricao">In consectetur interdum ipsum.  acquat convallis sed felis. Proin dapibus eros sit amet iaculisrhoncus in.</P>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

@@ -3,57 +3,212 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: 'montserrat';
+    font-size: 13px;
+    overflow-x: hidden;
+}
 header{
-    width: 100%;
-    height: 70px;
+    height: 9vh;
+    width: 100vw;
     background-color:#186EDD;
-}
-.container{
-display: flex;
-justify-content: space-between;
-}
-.header_title{
-    height: 70px;
-    width: 30%;
-    display: flex;
-    align-items: center;
-    color: #FFF;
-}
-.header_menu{
-    height: 70px;
-    width: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-right: 100px;
-}
-.header_title{
-    font-size: 30px;
-    margin-left: 30px;
-    font-family: 'Bitter', serif;
-}
-nav ul, nav li{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-nav ul{
-    display: flex;
-}
-nav li{
-    margin-right: 30px;
-    font-size: 20px;
-}
-li a{
-    text-decoration: none;
-    color: #FFF;
-}
-#banner{
-    background-image: url('../image/');
-    background-position: center;
-    background-size: cover;
-    height: 400px;
     display: flex;
     justify-content: center;
+}
+.header{
+    max-width: 80vw;
+    height: 9vh;
+    margin: auto;
+    display: flex;
+    color: #FFF;
+    align-items: center;
+}
+.header_title{
+    font-size:2vw;
+    margin-left: 4px;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+.header_menu{
+    display: flex;
+    justify-content: flex-start;
+    flex: 2;
+}
+.header_menu ul,
+.header_menu li{
+    list-style: none;
+}
+.header_menu ul{
+    display:flex;
+    justify-content: space-between;
+}
+.header_menu li a{
+    color:  #FFF;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    padding-left: 0px;
+    padding-right: 0px;
+    height: 60px;
+    align-items: center;
+    font-size: 14px;
+    border-bottom: 5px solid #186EDD;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.header_menu a .last{
+    margin-right: 21px;
+}
 
+.header_menu li a:hover{
+    border-bottom: 2px solid #FFF;
+    color: #cee0e7;
+}
+.header_menu .active a{
+    border-bottom: 2px solid #FFF;
+    margin-left: 80px;
+}
+.container{
+    height: 100vh;
+    width: 75vw;
+    background-color: #e4ecf0;
+}
+.home{
+    height: 78vh; 
+    overflow: hidden;
+}
+.home .sliders{
+    width: 313vw;
+    height: 78vh;
+    margin-left: -0vw;
+}
+.home .slide{
+    width: 100vw;
+    height: 78vh;
+    display: inline-block;
+    background-size: cover; 
+    background-position: bottom;
+}
+.home .slide.piscina{
+    background-image: url('../image/tarde-de-verao-a-beira-da-piscina.jpg');
+}
+.home .slide.produtos{
+    background-image: url('../image/produtos\ de\ limpeza\ perto\ da\ piscina.jpeg');
+}
+
+.home .slide.brinquedos{
+    background-image: url('../image/boias.jpeg');
+}
+.home .slidearea{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.6 );
+}
+.home h1{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 10px
+}
+.home h2{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 20px
+
+}
+.home p{
+    font-size: 20px;
+    margin-bottom: 15px;
+
+}
+.home .contact{
+    display: block;
+    background-color: #186EDD;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 30px;
+    margin-top: 25px;
+    border-radius: 35px;
+    height: 40px;
+}
+.home .sliders-pointers{
+    width: 100%;
+    height: 20px;
+    position: absolute;
+
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home .pointer{
+    width: 12px;
+    height: 12px;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 60px;
+    cursor: pointer;
+}
+.home .pointer.active{
+    background-color: #fff;
+}
+.produtos{
+    height: 85vh;
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+    margin-left: 6vw;
+    margin-right: 6vw;
+}
+.produtos .produtos-sub-title{
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: 350;
+}
+.produtos-title{
+    margin-top: 20px;
+    font-size: 50px;
+    font-weight: 500;
+}
+.area-produtos{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+    margin-top: 60px;
+
+}
+.produto{
+    background-color: #E9E9E9;
+    border-radius: 10px;
+    padding: 20px;
+    width: 18vw;
+    height: 10vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.produto-title{
+    font-size: 19px;
+    margin-bottom: 12px;
+    margin-top: 10px;
+}
+.produto-descricao{
+    color: #AFADB0;
+    font-size: 15px;
+    text-align: center;
+}
+.produto-icon{
+    width: 2vw;
+    height: 2vw;
 }
