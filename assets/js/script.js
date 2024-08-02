@@ -16,10 +16,10 @@ function nextBanner(clickedPoint){
             sliders.style.marginLeft = '0vw'
             break
         case 1:
-            sliders.style.marginLeft = '-107vw'
+            sliders.style.marginLeft = '-100vw'
             break
         case 2:
-            sliders.style.marginLeft = '-213vw'
+            sliders.style.marginLeft = '-200vw'
             break;
     }
     for(let i = 0; i<3;i++){
