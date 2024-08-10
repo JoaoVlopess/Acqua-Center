@@ -6,11 +6,6 @@ function nextBanner(clickedPoint){
     let pointData = parseInt(clickedPoint.target.getAttribute('data-item'))
     let sliders = document.querySelector('.sliders')
 
-
-    console.log(clickedPoint)
-    console.log(pointData)
-    console.log(sliders)
-
     switch(pointData){
         case 0:
             sliders.style.marginLeft = '0vw'
