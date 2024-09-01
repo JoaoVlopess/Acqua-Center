@@ -263,7 +263,7 @@ header{
     width: 100%;
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 356px;
+    grid-auto-columns: calc((100% / 3) - 11px);
     gap: 16px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -275,7 +275,7 @@ header{
 }
 .wrapper{
     max-width: 1100px;
-    width: 100%;
+    max-width: 100%;
     position: relative;
 }
 .wrapper i{
@@ -312,7 +312,8 @@ header{
     list-style: none;
     background-color: #FFF;
     border-radius: 8px;
-    padding: 30px;
+    padding: 40px;
+    padding-bottom: 30px;
     border: 2px solid #186EDD;
     display: flex;
     align-items: center;
@@ -322,18 +323,23 @@ header{
 .card .img img{
     width: 60px;
     height: 60px;
-    margin-top: 30px;
+    margin-top: 15px;
 }
 .card .carousel_title{
-    margin-top: 40px;
+    margin-top: 25px;
     font-size: 1.7rem;
+    text-align: center;
 }
 .card .carousel_description{
     margin-top: 20px;
+    font-size: 0.9rem;
     text-align: center;
     cursor:default;
 }
 
+.card a{
+    margin-top: auto;
+}
 
 
 
@@ -343,6 +349,27 @@ header{
 
 
 
+.us{
+    min-height: 88vh;
+    width: 100vw;
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+    padding-left: 17vw;
+    padding-right: 17vw;
+    background-color: #f5f5f5;
+
+}
+
+.us_area{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2,1fr);
+}
+.teste{
+    background-color: #8d8d8d;
+
+}
 
 
 
@@ -359,6 +386,27 @@ header{
     }
     .product-description{
         font-size: 1rem;
+    }
+    .carousel .card{
+        height: 51vh;
+    }
+    .card .img img{
+        width: 70px;
+        height: 70px;
+        margin-top: 30px;
+    }
+    .card .carousel_title{
+        margin-top: 30px;
+        font-size: 1.9rem;
+    }
+    .card .carousel_description{
+        margin-top: 25px;
+        margin-bottom: 25px;
+        font-size: 0.9rem;
+    }
+    .wrapper .carousel{ 
+        grid-auto-columns: calc((100% / 3) - 12px);
+
     }
 
 }

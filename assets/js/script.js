@@ -36,7 +36,12 @@ carousel.addEventListener("mousedown", dragStart);
 carousel.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop);
 
+const arrowBtns = document.querySelectorAll(".wrapper i");
+const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+
+
 let isDragging = false, startX, startScrollLeft;
+
 
 function dragging(e){
     if(!isDragging) return;
@@ -57,9 +62,6 @@ function dragStop(){
     carousel.classList.remove("dragging")
 }
 
-
-const arrowBtns = document.querySelectorAll(".wrapper i");
-const firstCardWidth = carousel.querySelector(".card").offsetWidth;
 
 arrowBtns.forEach(btn =>{
     btn.addEventListener("click", () =>{
