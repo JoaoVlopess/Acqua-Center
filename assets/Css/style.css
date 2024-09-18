@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'montserrat';
     font-size: 13px;
@@ -53,14 +56,15 @@ body{
 
 
 header{
-    height: 5vw;
+    height: 100px;
     width: 100vw;
     background-color:#186EDD;
     display: flex;
     justify-content: center;
 }
 .header{
-    height: 4.5vw;
+    height: 100px;
+    width: 100vw;
     margin: auto;
     display: flex;
     color: #FFF;
@@ -90,12 +94,13 @@ header{
     font-weight: 600;
     text-decoration: none;
     display: flex;
-    height: 40px;
+    height: 50px;
     align-items: center;
     font-size: 0.9rem;
     border-bottom: 5px solid #186EDD;
     margin-right: 30px;
     margin-left: 30px;
+
 }
 .header_menu li a:hover{
     border-bottom: 3px solid #FFF;
@@ -104,6 +109,9 @@ header{
 .header_menu .active a{
     border-bottom: 3px solid #FFF;
     margin-left: 80px;
+}
+.img_menu{
+    display: none;
 }
 
 
@@ -209,7 +217,7 @@ header{
 .area-products{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 2.5vw ;
+    gap: 2vw ;
     margin-bottom: 5vh;
 
 }
@@ -301,6 +309,7 @@ header{
 .carousel.dragging{
     scroll-snap-type: none;
     scroll-behavior: auto;
+
 }
 .carousel.dragging .card{
     cursor: grab;
@@ -349,37 +358,62 @@ header{
 
 
 
+
 .us{
-    height: 88vh;
+    height: 80vh;
     width: 100vw;
     display: flex; 
     align-items: center;
     flex-direction: column;
     padding-left: 15vw;
     padding-right: 15vw;
+    padding-bottom: 3vw;
     background-color: #f5f5f5;
-
+    font-family: 'montserrat';
 }
 
 .us_area{
     display: flex;
-    flex-direction: column;
+    margin-top:10px ;
+    justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
     height: 100%;
 
 }
 .us_image{
-    display: flex;
-    justify-content: center;
+    flex: 1;
+    width: auto;
+    height: 40vh;
+    width: 15vw;
     
 }
 .us_image img{
     border: solid 1px #8d8d8d;
-    border-radius: 15px;
-    width: 70%;
-    height: 70%;
+    border-radius: 30px;
+    max-width: 100%;
+    height: 492px;
+    height: auto;
+    display: block;
 }
-
+.us_description{
+    flex: 1;
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 90px;
+    font-family: 'montserrat';
+}
+.us_description h2{
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+.us_description p{
+    font-size: 17px;
+    line-height: 35px;
+}
 
 
 
@@ -395,6 +429,7 @@ header{
     padding-left: 15vw;
     padding-right: 15vw;
     padding-bottom: 1vw;
+    padding-top: 0.3vw;
     background:linear-gradient(#186EDD, #0f0e0e);
 
 }
@@ -404,14 +439,16 @@ header{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    gap: 10px;
 }
 .footer_contact{
     display: flex;
     flex-direction: column;
     color: #FFF;
 }
+
 .footer_contact h3{
-    margin-top: 0.4vw;
+    margin-top: 1.7vw;
     margin-bottom: 0.9vw;
     font-size: 1.3rem;
 }
@@ -426,7 +463,7 @@ header{
 }
 .footer .sub-title{
     margin-top: 4vh;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 400;
     letter-spacing:0.2em;
     cursor:default;
@@ -434,14 +471,17 @@ header{
     color: #FFF;
 }
 .footer .title{
-    margin-top: 1vh;
-    font-size: 2.4rem;
+    margin-top: 0.8vh;
+    font-size: 2rem;
     font-weight: 500;
     letter-spacing:0.07em;
     cursor:default;
     text-align: left;
     color: #FFF;
     margin-bottom: 1vw;
+}
+.footer_contact .title{
+    margin-bottom: 0vw;
 }
 .footer input{
     width: 80%;
@@ -453,6 +493,7 @@ header{
     margin-bottom: 1vw;
     padding-left: 7px;
     border: none;
+    font-family: 'montserrat';
 }
 .footer input:focus{
     border: 0.5px solid #000000;
@@ -470,6 +511,7 @@ header{
     padding-left: 7px;
     margin-bottom: 1vw;
     resize: none;
+    font-family: 'montserrat';
 }
 .footer_form #msg:focus{
     border: 0.5px solid #000000;
@@ -497,7 +539,7 @@ header{
     transition: .6s;
 }
 
-@media (min-width: 1900px){
+/* @media (min-width: 1900px){
     .contact{
         min-width:200px;
         min-height: 50px;
@@ -528,53 +570,400 @@ header{
 
     }
 
-}
+} */
 
-@media (max-width: 1350px){
-    .product-description{
-        font-size: 0.7rem;
-    }
-    .product{
-        height: 22vh;
-    }
-}
 
-@media (max-width: 1050px){
-    .product-description{
-        font-size: 0.5rem;
-    }
-    .product{
-        height: 22vh;
-    }
-    .contact{
-        min-width:140px;
-        min-height: 35px;
-        margin-bottom: 30px;
-        font-size: 10px;
-    }
-    .header_menu li a{
-        height: 30px;
-        font-size: 0.7rem;
-        margin-right: 30px;
-        margin-left: 30px;
-    }
-    .header_title{
-        font-size:1.7rem;
-    }
-    .home h1{
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-        margin-top: 30px;
-    }
-    .home h2{
-        font-size: 2rem;
-        margin-bottom: 0.6vw;
-        cursor:default;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    .home p{
-        font-size: 1rem;
 
+    @media ((min-width: 450px) and (max-width: 958px)){
+        .header_menu{
+            display: none;
+            position: absolute;
+            z-index: 99;
+            background-color: rgba(10,	48,	89, 0.9);
+            width: 60vw;
+            height: 78vh;
+            top: 100px;
+            right: 0;
+            scroll-behavior: smooth;
+        }
+        .header_menu ul{
+            flex-direction: column;
+
+        }
+        .header_title{
+            margin-left: 75px;
+        }
+        .header_menu .active a{
+            border-bottom: 0;
+            margin-left: 30px;
+        }
+        .header_menu li a{
+            font-weight: bold;
+            height: 120px;
+            font-size: 20px;
+            margin-right: 50px;
+            border: 0;
+        }
+        .img_menu{
+            display: block;
+            width: 35px;
+            height: 35px;
+            margin-right: 35px;
+            
+        }
+        .sub-title{
+            margin-top: 3vh;
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing:0.2em;
+            cursor:default;
+            text-align: center;
+        }
+        .title{
+            margin-top: 2vh;
+            margin-bottom: 2vh;
+            font-size: 2.1rem;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .home h1{
+            font-size: 2rem;
+            margin-bottom: 0.6vh;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .home h2{
+            font-size: 1.7rem;
+            margin-bottom: 3vh;
+        }
+        .home p{
+            font-size: 1.2rem;
+            margin-bottom: 4vh;
+        
+        }
+
+        .wrapper .carousel{
+            grid-auto-columns: calc((100% / 2) - 11px);
+
+        }
+
+        .contact{
+            min-width:200px;
+            min-height: 45px;
+
+        }
+
+
+        .area-products{
+            grid-template-columns: repeat(2,1fr);
+            gap: 5.5vw ;
+            margin-bottom: 5vh;
+            
+        }
+        .product{
+            background-color: #E9E9E9;
+            border-radius: 10px;
+            padding: 25px;
+            width: 30vw;
+            height: 19vh;
+        }
+        .product-title{
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        .product-description{
+            font-size: 0.8rem;
+        }
+        .product-icon{
+            width: 3.3vw;
+            height: 3.3vw;
+        }
+
+
+        .beneficios{
+            height: 80vh;
+        }
+        .card .carousel_title{
+            font-size: 1.6rem;
+        }
+        .card .carousel_description{
+            margin-top: 25px;
+            font-size: 1rem;
+        }
+        .carousel .card{
+            height: 45vh;
+        }
+        .carousel{
+            margin-top: 7vh;
+        }
+
+        
+        
+        .us_area{
+            flex-direction: column;
+            padding-top: 0;
+            margin-top: auto;
+        }
+        .us_image{
+            width: 100%;
+            padding-top: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .us_image img{
+            max-width: 100%;
+            height: 250px;
+        }
+        .us_description{
+            padding-left: 0;
+            align-items: center;
+            margin-top: auto;
+        }
+
+        .us_description h2{
+            font-size: 25px;
+            margin-top: 10px;
+        }
+        .us_description p{
+            font-size: 17px;
+            text-align: center;
+            line-height: 27px;
+        }
+
+
+
+        .footer .title{
+            font-size: 25px;
+        }
+        .footer_form #msg{
+            height: 10vw;
+            margin-bottom: 4vw;
+
+        }
+        .footer input{
+            height: 3.5vw;
+            margin-bottom: 2.5vw;
+        }
+        .footer_contact h3{
+            margin-top: 1.7vw;
+            margin-bottom: 2vw;
+            font-size: 1.1rem;
+        }
+        .footer_contact p{
+            margin-bottom: 2vw;
+            font-size: 0.9rem;
+            padding-right: 25px;
+        }
+        .footer_form .submit{
+            min-width:150px;
+            min-height: 45px;
+            
+        }
     }
-}
+
+
+
+
+
+    @media ((max-width: 450px)){
+        .header_menu{
+            display: none;
+            position: absolute;
+            z-index: 99;
+            background-color: rgba(10,	48,	89, 0.9);
+            width: 60vw;
+            height: 78vh;
+            top: 100px;
+            right: 0;
+            scroll-behavior: smooth;
+        }
+        .header_menu ul{
+            flex-direction: column;
+
+        }
+        .header_menu .active a{
+            border-bottom: 0;
+            margin-left: 30px;
+        }
+        .header_menu li a:hover{
+            border-bottom: none;
+        }
+
+        .header_menu li a{
+            border-bottom: none;
+            font-weight: bold;
+            height: 100px;
+            font-size: 15px;
+            margin-right: 50px;
+            border: 0;
+        }
+        .img_menu{
+            display: block;
+            width: 30px;
+            height: 30px;
+            margin-right: 30px;
+            
+        }
+        .header_title{
+            font-size: 30px;
+        }
+        .sub-title{
+            margin-top: 3vh;
+            font-size: 0.8rem;
+        }
+        .title{
+            margin-top: 2vh;
+            margin-bottom: 2vh;
+            font-size: 1.3rem;
+        }
+
+        .wrapper .carousel{
+            grid-auto-columns: calc((100% / 1) - 11px);
+
+        }
+
+        .contact{
+            min-width:130px;
+            min-height: 40px;
+            font-size: 10px;
+            margin-bottom: 30px;
+        }
+
+        .area-products{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            gap: 5.5vw ;
+            margin-bottom: 3vh;
+            
+        }
+
+        .product{
+            background-color: #E9E9E9;
+            border-radius: 10px;
+            padding: 20px;
+            width: 60vw;
+            height: 20vh;
+        }
+
+        .product-title{
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        .product-description{
+            font-size: 0.7rem;
+        }
+        .product-icon{
+            width: 6.3vw;
+            height: 5.3vw;
+        }
+
+        .home h1{
+            font-size: 1.5rem;
+            margin-bottom: 0.6vh;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .home h2{
+            font-size: 1.3rem;
+            margin-bottom: 3vh;
+        }
+        .home p{
+            font-size: 1rem;
+            margin-bottom: 4vh;
+            padding-left: 30px;
+            padding-right: 30px;
+        
+        }
+
+        .carousel .card{
+            scroll-snap-align: start;
+            height: 9vh;
+        }
+        .card .img img{
+            width: 50px;
+            height: 50px;
+            margin-top: 15px;
+        }
+        .card .carousel_title{
+            margin-top: 25px;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+        .card .carousel_description{
+            margin-top: 10px;
+            font-size: 0.8rem;
+            text-align: center;
+            cursor:default;
+        }
+
+        .us_area{
+            flex-direction: column;
+            padding-top: 0;
+        }
+        .us_image{
+            flex: 0;
+            width: 100%;
+            height: 150px;
+            padding-top: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+        }
+        .us_image img{
+            max-width: 100%;
+            height: 150px;
+        }
+        .us_description{
+            padding-left: 0;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .us_description h2{
+            font-size: 19px;
+            margin-top: 10px;
+            margin-bottom: 14px;
+        }
+        .us_description p{
+            font-size: 14px;
+            text-align: center;
+            line-height: 19px;
+        }
+
+        .beneficios{
+            height: 80vh;
+        }
+        .carousel .card{
+            height: 45vh;
+        }
+        .carousel{
+            margin-top: 7vh;
+        }
+        .footer_form #msg{
+            height: 10vw;
+            margin-bottom: 5vw;
+
+        }
+        .footer input{
+            height: 3.5vw;
+            margin-bottom: 2.5vw;
+        }
+        .footer_contact h3{
+            margin-top: 1.7vw;
+            margin-bottom: 2vw;
+            font-size: 1.3rem;
+        }
+        .footer_contact p{
+            margin-bottom: 2vw;
+            font-size: 1rem;
+        }
+        .footer_form .submit{
+            min-width:200px;
+            min-height: 45px;
+            
+        }
+    }
+
+ 
+

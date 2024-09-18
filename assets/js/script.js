@@ -68,3 +68,18 @@ arrowBtns.forEach(btn =>{
         carousel.scrollLeft += btn.id === "left" ? - firstCardWidth : firstCardWidth;
     })
 })
+const menuImg = document.querySelector(".img_menu")
+const menuBar = document.querySelector(".header_menu")
+menuImg.addEventListener('click', OCBar);
+var barOn = 0;
+
+function OCBar(){
+    if(barOn == 0){
+        menuBar.style.display = 'block'
+        barOn = 1
+    }else{
+        menuBar.style.display = 'none'
+        barOn = 0
+    }
+}
+
